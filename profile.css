@@ -1,0 +1,172 @@
+body {
+    background-color: rgba(255, 228, 118, 0.427);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Georgia;
+}
+.topnav {
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 75px;
+    background-color: rgb(252, 163, 55);
+    font-family: Georgia;
+}
+.Logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.l1 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.name a {
+    text-decoration: none;
+    color: black;
+}
+.Logo2 {
+    float: right;
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+}
+.l2 {
+    margin-top: 23px;
+}
+.mantra {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color: rgba(252, 197, 78, 0.981);
+    font-family: Georgia;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px; 
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    right: 25px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.user-profile {
+    margin-left: 10px;
+    position: absolute;
+    
+}
+
+.user-profile-content {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-profile:hover .user-profile-content {
+    display: block;
+}
+
+.user-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-profile-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+.card h2 {
+    text-align: center;
+    color: #333;
+}
+.card p {
+    font-size: 15px;
+    font-family: Georgia;
+}

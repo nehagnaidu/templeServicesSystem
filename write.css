@@ -1,0 +1,230 @@
+body {
+    background-color: rgba(255, 228, 118, 0.427);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Georgia;
+}
+.topnav {
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 75px;
+    width: auto;
+    background-color: rgb(252, 163, 55);
+    font-family: Georgia;
+}
+.Logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.l1 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.name a {
+    text-decoration: none;
+    color: black;
+}
+.Logo2 {
+    float: right;
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+}
+.l2 {
+    margin-top: 23px;
+}
+.mantra {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color: rgba(252, 197, 78, 0.981);
+    font-family: Georgia;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px; 
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    right: 25px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.user-profile {
+    margin-left: 10px;
+    position: absolute;
+    
+}
+
+.user-profile-content {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-profile:hover .user-profile-content {
+    display: block;
+}
+
+.user-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-profile-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.img-container img{
+    float: left;
+    margin-top: 55px;
+    margin-left: 80px;
+    width: 600px;
+    height: 410px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(178, 12, 12, 0.3);
+}
+.container{
+    width: 400px;
+    padding: 30px;
+    float: right;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    margin-right: 80px;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 15px;
+    background-color: #ffe283;
+    border: 1px solid #b5b4b3;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, .calendar-container, .time-slots {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.Btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    background-color: #218838;
+}
+footer {
+    margin-left: -7px;
+    height: 45px;
+    background-color: rgb(219, 124, 8);
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 1300px;
+    bottom: 0;
+    font-size: 10px;
+    font-family: Georgia;
+    margin-top: 570px;
+}
+

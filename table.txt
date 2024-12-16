@@ -1,0 +1,276 @@
+contact_form
+
+CREATE TABLE contact_form (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+seva_bookings
+
+CREATE TABLE seva_bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    photo_id VARCHAR(50) NOT NULL,
+    photo_id_no VARCHAR(50) NOT NULL,
+    seva_name VARCHAR(100) NOT NULL,
+    seva_time TIME NOT NULL,
+    seva_date DATE NOT NULL,
+    booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+hotel_booking
+CREATE TABLE hotel_booking (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(10) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    checkin_date DATE NOT NULL,
+    checkin_time VARCHAR(20) NOT NULL,
+    checkout_date DATE NOT NULL,
+    checkout_time VARCHAR(20) NOT NULL,
+    persons INT(6) NOT NULL,
+    room_type VARCHAR(50) NOT NULL,
+    booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+darshan_booking
+CREATE TABLE darshan_booking (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    photo_id VARCHAR(50) NOT NULL,
+    photo_id_no VARCHAR(50) NOT NULL,
+    booking_date DATE NOT NULL,
+    booking_time TIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+users
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    phoneno VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+log_tab
+CREATE TABLE log_tab (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    login_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+footer
+<footer>
+        <p>&copy; Sri Kapileshwara Swamy Vari Temple. All rights reserved.</p>
+    </footer>
+
+footer {
+    margin-left: -7px;
+    height: 25px;
+    background-color: rgb(219, 124, 8);
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 10px;
+    font-family: Georgia;
+}
+
+
+calendar_logic
+js file
+
+const calendarElement = document.getElementById('calendar');
+const monthYearElement = document.getElementById('monthYear');
+const prevMonthButton = document.getElementById('prevMonth');
+const nextMonthButton = document.getElementById('nextMonth');
+const timeSlotsElement = document.getElementById('timeSlots');
+
+let currentDate = new Date();
+const today = new Date();
+// Set maxDate to the last day of the third month from the current month
+const maxDate = new Date(today.getFullYear(), today.getMonth() + 3, 0);
+
+// Updated booked and not released dates arrays
+const bookedDates = [
+    "2024-08-15", "2024-08-20", "2024-08-22", "2024-08-25", "2024-08-28", 
+    "2024-09-01", "2024-09-05", "2024-09-10", "2024-09-15", "2024-09-18", 
+    "2024-09-22", "2024-09-25", "2024-09-29"
+];
+
+const notReleasedDates = [
+    "2024-09-25", "2024-09-27", "2024-09-30", "2024-10-01", "2024-10-03", 
+    "2024-10-05", "2024-10-07", "2024-10-10", "2024-10-12", "2024-10-15"
+];
+
+let selectedDateElement = null;
+
+function updateCalendar() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const firstDayOfMonth = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Update month and year display
+    monthYearElement.textContent = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    calendarElement.innerHTML = ''; // Clear the previous content
+
+    // Add blank days for the first week
+    for (let i = 0; i < firstDayOfMonth; i++) {
+        const blankDay = document.createElement('div');
+        blankDay.classList.add('calendar-day', 'blank-day');
+        calendarElement.appendChild(blankDay);
+    }
+
+    // Add days for the current month
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayElement = document.createElement('div');
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        dayElement.textContent = day;
+        dayElement.classList.add('calendar-day');
+
+        if (bookedDates.includes(dateStr)) {
+            dayElement.classList.add('booked');
+            dayElement.addEventListener('click', () => {
+                alert("This date is already booked.");
+                hideTimeSlots(); // Hide time slots if a booked date is clicked
+            });
+        } else if (notReleasedDates.includes(dateStr)) {
+            dayElement.classList.add('not-released');
+            dayElement.addEventListener('click', () => {
+                alert("Darshan for this date has not been released.");
+                hideTimeSlots(); // Hide time slots if a not released date is clicked
+            });
+        } else {
+            dayElement.classList.add('available');
+            dayElement.addEventListener('click', () => {
+                selectDate(dayElement, dateStr);
+            });
+        }
+
+        calendarElement.appendChild(dayElement);
+    }
+}
+
+function selectDate(dayElement, dateStr) {
+    if (selectedDateElement) {
+        selectedDateElement.classList.remove('selected-date');
+    }
+
+    selectedDateElement = dayElement;
+    selectedDateElement.classList.add('selected-date');
+
+    document.getElementById('selectedDate').value = dateStr;
+
+    displayTimeSlots(dateStr); // Only display time slots when an available date is clicked
+}
+
+function displayTimeSlots(dateStr) {
+    timeSlotsElement.style.display = 'block'; // Show time slots
+    const timeSlotElements = timeSlotsElement.querySelectorAll('.time-slot');
+    timeSlotElements.forEach(slot => {
+        slot.classList.remove('selected');
+        slot.addEventListener('click', () => {
+            selectTimeSlot(slot);
+        });
+    });
+
+    alert(`You selected ${dateStr}. Choose a time slot.`);
+}
+
+function hideTimeSlots() {
+    timeSlotsElement.style.display = 'none'; // Hide time slots
+}
+
+function selectTimeSlot(slot) {
+    const timeSlotElements = timeSlotsElement.querySelectorAll('.time-slot');
+    timeSlotElements.forEach(slot => {
+        slot.classList.remove('selected');
+    });
+
+    slot.classList.add('selected');
+    document.getElementById('selectedTimeSlot').value = slot.textContent;
+}
+
+prevMonthButton.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    // Ensure we don't go back further than the current month
+    if (currentDate < today) {
+        currentDate = new Date(today);
+    }
+    updateCalendar();
+});
+
+nextMonthButton.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    // Ensure we don't go forward beyond the maxDate
+    if (currentDate > maxDate) {
+        currentDate = new Date(maxDate);
+    }
+    updateCalendar();
+});
+
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    const selectedDate = document.getElementById('selectedDate').value;
+    const selectedTimeSlot = document.getElementById('selectedTimeSlot').value;
+
+    if (!selectedDate || !selectedTimeSlot) {
+        event.preventDefault();
+        alert("Please select a valid date and time slot before booking.");
+    }
+});
+
+// Initialize the calendar when the page loads
+updateCalendar();
+
+
+
+b1.php
+<?php
+// Include your database connection file
+include 'connection.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $gender = $_POST['gender'];
+    $photoId = $_POST['photoId'];
+    $photoIdNo = $_POST['photoIdNo'];
+    $selectedDate = $_POST['selectedDate'];
+    $selectedTimeSlot = $_POST['selectedTimeSlot'];
+
+    // Prepare the SQL statement
+    $sql = "INSERT INTO darshan_booking (name, phone, gender, photo_id, photo_id_no, booking_date, booking_time) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepare and bind
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "sssssss", $name, $phone, $gender, $photoId, $photoIdNo, $selectedDate, $selectedTimeSlot);
+
+    // Execute the statement
+    if (mysqli_stmt_execute($stmt)) {
+        echo "Booking successful!";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    // Close the statement and connection
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+}
+?>

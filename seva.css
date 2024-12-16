@@ -1,0 +1,332 @@
+body {
+    background-color: rgba(255, 228, 118, 0.427);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Georgia;
+}
+.topnav {
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 75px;
+    width: auto;
+    background-color: rgb(252, 163, 55);
+    font-family: Georgia;
+}
+.Logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.l1 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.name a {
+    text-decoration: none;
+    color: black;
+}
+.Logo2 {
+    float: right;
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+}
+.l2 {
+    margin-top: 23px;
+}
+.mantra {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color: rgba(252, 197, 78, 0.981);
+    font-family: Georgia;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px; 
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    right: 25px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.user-profile {
+    margin-left: 10px;
+    position: absolute;
+    
+}
+
+.user-profile-content {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-profile:hover .user-profile-content {
+    display: block;
+}
+
+.user-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-profile-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.title{
+    font-size: 26px;
+    margin-top: 20px;
+    text-align: center;
+    color:rgb(136, 30, 1);
+}
+.seva-container1{
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+    
+}
+.seva{
+    text-align: center;
+    margin-left: 50px;
+    width: 250px;
+    height: 190px;
+    background-color: #ffe283;
+    border: 1px solid #787877;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Popup form styling */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .Btn {
+    margin-right: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container .Btn:hover {
+    background-color: #0b7dda;
+}
+
+.seva1{ 
+    text-align: center;
+    margin-left: 20px;
+    width: 250px;
+    height: 190px;
+    background-color: #ffe283;
+    border: 1px solid #787877;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.head{
+    margin-top: 10px;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 20px;
+    color:rgb(168, 38, 3);
+}
+.content{
+    margin-top: 10px;
+    font-family: Georgia;
+    font-size: 12px;
+    text-align: center;
+
+}
+.clock{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+.clock a{
+    margin-left: 10px;
+}
+.Btn {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+.Btn:hover{
+    background-color: #218838;
+}
+.seva-container2{
+    margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-left: -7px;
+    height: 40px;
+    width: 1300px;
+    background-color: rgb(219, 124, 8);
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: Georgia;
+    bottom: 0; /* Stick the footer to the bottom of the viewport */
+    left: 0; /* Ensures the footer spans from the left edge */
+}

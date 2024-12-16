@@ -1,0 +1,365 @@
+body {
+    background-color: rgba(255, 228, 118, 0.427);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Georgia;
+}
+.topnav {
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 75px;
+    width: 1300px;
+    background-color: rgb(252, 163, 55);
+    font-family: Georgia;
+}
+.Logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.l1 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.name a {
+    text-decoration: none;
+    color: black;
+}
+.Logo2 {
+    float: right;
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+}
+.l2 {
+    margin-top: 23px;
+}
+.mantra {
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color: rgba(252, 197, 78, 0.981);
+    font-family: Georgia;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px; 
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    right: 25px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.user-profile {
+    margin-left: 10px;
+    position: absolute;
+    
+}
+
+.user-profile-content {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-profile:hover .user-profile-content {
+    display: block;
+}
+
+.user-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-profile-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.container {
+    background-color: #ffb005a0;
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      max-width:1000px;
+      height: 710px;
+      margin-top: 50px;
+      margin-left: 150px;
+  }
+
+  .img-container img {
+    float: left;
+      max-width: 501px;
+      height: 650px;
+      border-radius: 20px 0 0 20px;
+      margin-top: 10px;
+      margin-right: 4px;
+  }
+
+.accom-container {
+    float: right;
+      background-color: #fff0cc; /* Semi-transparent background for the form */
+      padding: 20px;
+      border-radius:  0 20px 20px 0;
+      color: #000;
+      width: 450px;
+      margin-left: 5px;
+      margin-top: 10px;
+  }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, .calendar-container, .time-slots {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.Btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.Btn:hover {
+    background-color: #218838;
+}
+#bookingForm .calendar-container {
+    border: 1px solid #b8860b;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff0cc;
+}
+
+#bookingForm .month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#bookingForm .month-nav .arrow {
+    cursor: pointer;
+    font-size: 20px;
+    color: #663300;
+}
+
+#bookingForm .time-slots {
+    margin-top: 20px;
+}
+
+#bookingForm .time-slot {
+    padding: 10px;
+    margin-bottom: 5px;
+   
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#bookingForm .time-slot:hover {
+    background-color: #ffe4b5;
+}
+
+
+.calendar-container {
+    width: 400px;
+    padding: 10px;
+    font-family: Times New Roman;
+    margin-top: 10px;
+    
+}
+
+.month-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+#monthYear {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#calendar {
+    width: 380px;
+    margin-left: -1px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px;
+    text-align: center;
+    justify-content: center; /* Center the grid within the container */
+}
+
+.day, .calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.booked {
+    background-color: red;
+    color: white;
+}
+
+.not-released {
+    background-color: grey;
+    color: white;
+}
+
+.available {
+    background-color: green;
+    color: white;
+}
+
+.selected-date {
+    background-color: #ffb005a0;
+
+    color: white;
+}
+
+.time-slots {
+    display: none;
+}
+
+.time-slot {
+    cursor: pointer;
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid #ccc;
+}
+
+.time-slot.selected {
+    background-color: #ffb005a0;
+    color: white;
+}
+
+.time-slot:hover {
+    background-color: rgba(219, 124, 8, 0.2);
+}
+footer {
+    margin-left: -7px;
+    height: 25px;
+    background-color: rgb(219, 124, 8);
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 1300px;
+    bottom: 0;
+    font-size: 10px;
+    font-family: Georgia;
+    margin-top: 100px;
+}

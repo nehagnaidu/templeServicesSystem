@@ -1,0 +1,246 @@
+body {
+    background-color: rgba(255, 228, 118, 0.427);
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Georgia;
+}
+.topnav {
+    margin-top: -7px;
+    margin-left: -7px;
+    height: 75px;
+    width: 1300px;
+    background-color: rgb(252, 163, 55);
+    font-family: Georgia;
+}
+.Logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.l1 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.name {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.name a {
+    text-decoration: none;
+    color: black;
+}
+.Logo2 {
+    float: right;
+    display: flex;
+    margin-right: 40px;
+    gap: 10px;
+}
+.l2 {
+    margin-top: 23px;
+}
+.mantra {
+    margin-top: 30px;
+    font-size: 22px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    background-color: rgba(252, 197, 78, 0.981);
+    font-family: Georgia;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 10px; 
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: absolute;
+    right: 25px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.user-profile {
+    margin-left: 10px;
+    position: relative;
+}
+
+.user-profile-content {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 100px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-profile:hover .user-profile-content {
+    display: block;
+}
+
+.user-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-profile-content a:hover {
+    background-color: rgb(252, 163, 55);
+    color: #f8f8f8;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.user-icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.title{
+    font-size: 25px;
+    margin-top: 25px;
+    text-align: center;
+    color:rgb(136, 30, 1);
+    font-family: Georgia;
+}
+.container img {
+    float: left;
+    width: 550px;
+    height: 400px;
+    margin-top: 25px;
+    margin-left: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(30, 30, 30, 0.2); 
+}
+.subhead{
+    margin-top: 110px;
+    float: right;
+    margin-right: 550px;
+    font-size: 19px;
+    font-family: Georgia;
+    text-decoration: underline;
+    color: rgb(211, 121, 11);
+}
+.content{
+    float: right;
+    margin-top: 10px;
+    margin-right: 60px;
+    font-size: 14px;
+    font-family: Georgia;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    text-indent: 30px;
+}
+.container2 img {
+    float: right;
+    width: 450px;
+    height: 500px;
+    margin-top: 140px;
+    margin-right: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(30, 30, 30, 0.2); 
+    margin-bottom: 30px;
+}
+.subheadL{
+    margin-top: 110px;
+    float: left;
+    margin-top: 130px;
+    margin-left: 45px;
+    font-size: 19px;
+    font-family: Georgia;
+    text-decoration: underline;
+    color: rgb(211, 121, 11);
+}
+.contentL1{
+    float: left;
+    margin-top: 10px;
+    margin-left: 45px;
+    font-size: 14px;
+    font-family: Georgia;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    text-indent: 30px;
+}
+.contentL2{
+    float: left;
+    margin-top: 10px;
+    margin-left: 45px;
+    font-size: 14px;
+    font-family: Georgia;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    text-indent: 30px;
+}
+footer {
+    margin-left: -7px;
+    height: 25px;
+    background-color: rgb(219, 124, 8);
+    color: #000;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 1300px;
+    bottom: 0;
+    font-size: 10px;
+    font-family: Georgia;
+    margin-top: 1000px;
+}
+

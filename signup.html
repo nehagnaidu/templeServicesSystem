@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>SignUp Form</title>
+
+</head>
+<body>
+    <div class="topnav">
+        <div class="Logo">
+        <div class="l1">
+            <i class="fa-solid fa-gopuram fa-2x"></i>
+         </div>
+         <div class="name"><a href="home.html">Sri Kapileswara Swamy Vari Temple</a></div>
+        </div>
+        <div class="Logo2">
+         <div class="l2">
+            <i class="fa-solid fa-drum fa-2x"></i>
+         </div>
+         <div class="mantra">Om Namo Shivaya</div>
+        </div>
+    </div>
+    <div class="header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="darshanbooking.php">Darshan Booking</a>
+                        <a href="sevabooking.php">Seva Booking</a>
+                        <a href="accomodation.php">Accommodation Booking</a>
+                    </div>
+                </li>
+                <li><a href="writetous.php">Write to Us</a></li>
+                <li class="user-profile">
+        <i class="fas fa-user user-icon"></i>
+        <div class="user-profile-content">
+            <?php if ($isLoggedIn): ?>
+                <a href="profile.php" id="profile">Profile</a>
+                <a href="logout.php" id="logout">Log Out</a>
+            <?php else: ?>
+                <a href="signin.html" id="signin">Sign In</a>
+                <a href="signup.html" id="signup">Sign Up</a>
+            <?php endif; ?>
+        </div>
+    </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="img-container">
+        <img src="images/kapileshwaraSwamy.jpg" alt="sri kapileshwar Swamy utasavam picture">
+        </div>
+       
+    <div class="container">
+    <b>Sign Up</b>
+    <form action="signup.php" method="post">
+    <div class="text">Create your own account</div><br>
+    <div class="text">Enter your Name</div><br>
+    <input type="text" id="username" name="username" required><br><br>
+    <div class="text">Enter your Phone number</div><br>
+    <input type="text" id="phoneno" name="phoneno" required><br><br>
+    <div class="text">Enter your password</div><br>
+    <input type="password" id="password" name="password" required><br><br>
+    <div class="text">Enter confirm password</div><br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+    <button class="Btn" type="submit">Sign Up</button><br><br>
+</form>
+    <hr><br>
+    Already have an account?<a href="signin.html"> Log In</a>
+    </div>
+    <footer>
+        <p> &copy; Sri Kapileshwara Swamy Vari Temple. All rights reserved.</p>
+     </footer>
+</body>
+</html>
