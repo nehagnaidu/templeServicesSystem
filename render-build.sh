@@ -1,13 +1,10 @@
 #!/bin/bash
+# Install PHP manually
 
-# Update the package list to install software
-apt-get update
+# Download and install PHP
+curl -sL https://deb.nodesource.com/setup_16.x | bash -
+sudo apt-get update -y
+sudo apt-get install -y php-cli php-mbstring php-xml
 
-# Install PHP (you can change the version if needed)
-apt-get install -y php-cli
-
-# Print PHP version to confirm installation
-php --version
-
-# Start the PHP built-in server on port 8080
-php -S 0.0.0.0:8080 -t .
+# Start PHP server
+php -v
